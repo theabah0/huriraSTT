@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <style>
+      .navbar-nav{
+          float:right
+      }
+        
+        #interim{
+            height:auto;
+            white-space:;
+            overflow-y:hidden;
+            overflow-x:scroll;
+        }
+        *{
+        
+          
+          
+          box-sizing:border-box
+          }
+          body,html{
+              padding:0;
+              margin:0;
+              width:100vw;
+              color:white;
+          }
+       
+        
+   
+     iconify-icon{
+     margin:2px;
+         font-size:10vw;
+         color:white;
+         }
+         p{
+             text-align:center
+         }
+         
+     
+          h1{
+              color:white
+          }
+          .body{
+          position:;
+        top:0; left:0;right:0;bottom:0;
+         height:100vh;
+         max-height:100vh;
+              overflow:hidden;
+              height:100%;
+              width:100%;
+          }
+         .innerBody{
+        border-radius:0;
+         top:;
+         width:100vw;
+         overflow-x:hidden;
+             overflow-y:scroll;
+             height:75vh;
+             background-color:;
+         } 
+         
+   .settings{
+       display:none;
+       position:fixed;
+       width:100%;
+       background-color:black;
+   }
+          .bottom-div{
+          overflow:scroll;
+          bottom:0;
+          position:fixed;
+          bottom:0;
+          
+          }
+          .chat-bubble {
+  
+  background-color:rgb(68, 60, 80);
+  padding: 10px;
+  border-radius:15px 15px 0px 15px;
+  margin: 5px;
+  clear: both;
+  float:right;
+  
+}
+ #chatContainer{
+ width:100vw;
+ display:block;
+ 
+   color:white;
+  height: auto;
+   
+   }
+   
+   .bottom-div{
+   border-radius:3vw;
+       
+       border:1px solid gray;
+           position:relative;
+      } 
+   
+   .ls{
+   border-top:5px solid black;
+    ;
+   padding:1px;
+       position:fixed;
+       bottom:0;
+       overflow:scroll;
+   }
+   
+   .us{
+   
+       background-color:;
+       padding:5px;
+       border-bottom:2px solid gray;
+   }
+      </style>
+    <meta charset="UTF-8" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+    <title>HuriraTTS</title>
+  </head>
+  <body  class="bg-dark"> 
+      <div class="body"><div class="us">
+       <div id ="top-header">     <p id="status" class="lead mt-3 text-light" style="display: none">👂</p>  <h1 class="d-inline">Hurira</h1> 
+     <span class="d-inline nav navbar-right navbar-nav " onclick="settingToggle()"><iconify-icon  icon="gala:settings"></iconify-icon></span></div></div>
+          <div class="innerBody bg-secondary">
+     <div class="mt-4 settings" id="div_language">
+      <h2 class="mb-3 text-light">Select Language</h2>
+      <select class="form-select bg-secondary text-light" id="select_language" onchange="updateCountry()"></select>
+      <select class="form-select bg-secondary text-light mt-2" id="select_dialect"></select>
+    </div> 
+    
+    <div id="chatContainer">
+        
+    </div>
+    </div>
+   <div class="ls bg-dark">
+    <div class="mt-4 bottom-div container">
+     
+      <span  id="interim" class="text-light"></span> <span id="start"><iconify-icon icon="fluent:send-28-filled"></iconify-icon></span>
+      </div>
+      <p class="text-muted small ">
+      Free Research Preview. HuriraTTS may generate incorrect spellings or grammar.
+      
+      </p>
+  
+    
+    </div>
+    </div>
+    <script src="listen.js"></script>
+  <script src="languages.js"></script>
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+  </body>
+  </html>
