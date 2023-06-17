@@ -1,4 +1,7 @@
 if ("webkitSpeechRecognition" in window) {
+  document.querySelector("#start").onclick = () => {
+    speechRecognition.start();
+  };
 
 function scrollToBottom() { const messagesContainer = document.querySelector('.innerBody'); messagesContainer.scrollTop = messagesContainer.scrollHeight; }
 //toggle settings menu
@@ -63,9 +66,6 @@ scrollToBottom();
     document.querySelector("#interim").innerHTML = interim_transcript;
   };
 
-  document.querySelector("#start").onclick = () => {
-    speechRecognition.start();
-  };
 
   
 } else {
