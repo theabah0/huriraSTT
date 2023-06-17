@@ -15,7 +15,7 @@
 
 span {
   font-family: 'Sohne-Bold', Arial, sans-serif;}
-         *{ 
+         *{ color:white;
           box-sizing:border-box
           }
           body,html{
