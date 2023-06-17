@@ -31,10 +31,10 @@ chatBubble.classList.add('text-light'); chatBubble.classList.add('chat-bubble');
   speechRecognition.lang = document.querySelector("#select_dialect").value;
 //on start 
   speechRecognition.onstart = () => {
-    document.querySelector("#status").innerText = "Listening ...";
+ //   document.querySelector("#status").innerHTML = "Listening ...";
   };
   speechRecognition.onerror = () => {
-    document.querySelector("#status").innerText = "Error";
+  //  document.querySelector("#status").innerText = "Error";
     console.log("Speech Recognition Error");
   };
   //on result
@@ -52,7 +52,7 @@ chatBubble.classList.add('text-light'); chatBubble.classList.add('chat-bubble');
  
   //on end
   speechRecognition.onend = () => {
-    document.querySelector("#status").innerHTML = "Tap fly to speak.";
+   // document.querySelector("#status").innerHTML = "Tap fly to speak.";
     
   document.querySelector("#interim").innerText=""; createUserMessage(interim_transcript);
 scrollToBottom();
@@ -69,5 +69,5 @@ scrollToBottom();
 
   
 } else {
-  document.querySelector('body').innerHTML="<h1>Speech Recognition Not Available</h1>";
+  alert("Speech Recognition Not Available in this browser. please try another browser like Chrome");
 }
