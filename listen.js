@@ -16,7 +16,7 @@ if (settings.style.display=="none"){
      function createUserMessage(interim_transcript) {
   const chatBubble = document.createElement('div'); 
 chatBubble.classList.add('text-light'); chatBubble.classList.add('chat-bubble');
-  chatBubble.innerText = interim_transcript;
+  chatBubble.innerText = interim_transcript + " ";
   chatContainer.appendChild(chatBubble);
 } 
 //web speech api config and setting parameters
