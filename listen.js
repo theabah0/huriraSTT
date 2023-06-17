@@ -1,7 +1,7 @@
 if ("webkitSpeechRecognition" in window) {
 
 function scrollToBottom() { const messagesContainer = document.querySelector('.innerBody'); messagesContainer.scrollTop = messagesContainer.scrollHeight; }
-
+//toggle settings menu
 function settingToggle(){
 let settings = document.querySelector('.settings')
 if (settings.style.display=="none"){
@@ -9,7 +9,10 @@ if (settings.style.display=="none"){
 }else{
     settings.style.display="none"
 }
-    
+   //copy to clipboard functionality
+    function copyToCB{
+
+    }
 }
    // chat functionality 
     chatContainer= document.querySelector("#chatContainer")
@@ -28,10 +31,10 @@ chatBubble.classList.add('text-light'); chatBubble.classList.add('chat-bubble');
   speechRecognition.lang = document.querySelector("#select_dialect").value;
 //on start 
   speechRecognition.onstart = () => {
-    document.querySelector("#status").style.display = "inline-block";
+    document.querySelector("#status").innerText = "Listening ...";
   };
   speechRecognition.onerror = () => {
-    document.querySelector("#status").style.display = "none";
+    document.querySelector("#status").innerText = "Error";
     console.log("Speech Recognition Error");
   };
   //on result
@@ -49,7 +52,7 @@ chatBubble.classList.add('text-light'); chatBubble.classList.add('chat-bubble');
  
   //on end
   speechRecognition.onend = () => {
-    document.querySelector("#status").style.display = "none";
+    document.querySelector("#status").innerHTML = "Tap fly to speak.";
     
   document.querySelector("#interim").innerText=""; createUserMessage(interim_transcript);
 scrollToBottom();
@@ -66,5 +69,5 @@ scrollToBottom();
 
   
 } else {
-  alert("Speech Recognition Not Available");
+  document.querySelector('body').innerHTML="<h1>Speech Recognition Not Available</h1>";
 }
