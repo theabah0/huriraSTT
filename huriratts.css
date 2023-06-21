@@ -9,13 +9,13 @@
             overflow-x:scroll;
         }
     
-          body {
+          body, #chatContainer, .chatBubble {
   font-family: 'Signifer-Light', Arial, sans-serif;
 }
 
 span {
   font-family: 'Sohne-Bold', Arial, sans-serif;}
-         *{ color:white;
+         *{ 
           box-sizing:border-box
           }
           body,html{
@@ -25,12 +25,38 @@ span {
               color:white;
           }
        
-        
-   
+        #status{
+            color:green;
+            font-weight:500;
+        }
+   #btns{
+       display: flex;
+        flex-direction: column; 
+        align-items: center;
+        justify-content: center;
+         
+         height: 10vh;  
+
+       position:fixed;
+       bottom:30vh;
+       right:0;
+       background-color:transparent;
+       margin:3px;
+       border:1.2px double white;
+       border-radius:4px;
+       height:auto;
+       padding:0px;
+       text-align:center;
+       z-index:4;
+   }
      iconify-icon{
      margin:2px;
          font-size:10vw;
-         color:white;
+         color:#ffffff;
+       
+         }
+         iconify-icon[icon="gala:settings"]{
+             color:white;
          }
          p{
              text-align:center
@@ -38,13 +64,13 @@ span {
          
      
           h1{
-              color:white
+              color:white;
           }
           .body{
           position:;
         top:0; left:0;right:0;bottom:0;
          height:100vh;
-         max-height:100vh;
+         min-height:100vh;
               overflow:hidden;
               height:100%;
               width:100%;
@@ -55,25 +81,44 @@ span {
          width:100vw;
          overflow-x:hidden;
              overflow-y:scroll;
-             height:75vh;
-             background-color:;
+             height:70vh;
+            
+             background-color:#b4b4b431    ;
          } 
+         
+         .animated-icon {
+          animation: fadeOut 1s ease forwards;
+           } 
+          @keyframes fadeOut { 
+          0% {
+           opacity: 1;
+           display:inline-block;
+           
+            }
+             100% {
+              opacity: 0;
+               display: none; 
+               }
+                }
          
    .settings{
        display:none;
        position:fixed;
        width:100%;
        background-color:black;
+       padding:10px;
+       z-index:5;
    }
           .bottom-div{
           overflow:scroll;
           bottom:0;
-          position:fixed;
+          
           bottom:0;
           
           }
           .chat-bubble {
   display:inline;
+  color:#39002e;
  /* background-color:rgb(68, 60, 80);
   padding: 10px;
   border-radius:15px 15px 0px 15px;
@@ -83,36 +128,78 @@ span {
   */
 }
  #chatContainer{
-padding-left:3vw;
-padding-right:2vw;
- width:100vw;
+ width:90vw;
  display:block;
  padding-bottom:30px;
-   color:white;
-  height: auto;
+   
+  height: 80vw;
+   position:relative;
    
    }
    
    .bottom-div{
+   background-color:#6b807b22;
    border-radius:3vw;
-       
-       border:1px solid gray;
+       border:1px double white;
+     /*  border:1px solid gray;*/
            position:relative;
       } 
    
    .ls{
    border-top:5px solid black;
-    ;
+    height:40vw;
    padding:1px;
-       position:fixed;
+      border-top:3px solid gray;
        bottom:0;
-       overflow:scroll;
+       overflow:;
+      
    }
-   
+   ls *{
+       width:95vw;
+       
+   }
    .us{
    
        background-color:;
        padding:5px;
        border-bottom:2px solid gray;
    }
+   .ls > p{
+       width:98vw;
+       
+   }
+   
+@keyframes myAnimation {
+      0% { 
+      
+       
+      color:red;
+      border-left:50vw solid transparent;
      
+      
+      }
+      100% { 
+      opacity:1
+      
+       }
+      
+    }
+     
+#start{
+ 
+    z-index:5;
+    
+    padding:1px;
+    
+      animation: myAnimation 0.5s linear 4 forwards;
+    
+}
+
+
+    
+/*.jst-border{
+
+    border:1px solid white;
+ 
+    padding:1vh;
+}*/
