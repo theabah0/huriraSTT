@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Signifer-Light&family=Sohne-Bold&family=Sohne-Regular&family=SohneMono-Bold&family=SohneMono-Regular&display=swap"/>
+       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Signifer-Light&family=Sohne-Bold&family=Sohne-Regular&family=SohneMono-Bold&family=SohneMono-Regular&display=swap"/>
 <link rel="stylesheet" href="huriratts.css"/>
-      
+ 
     <meta charset="UTF-8" />
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
@@ -18,31 +18,36 @@
   </head>
   <body  class="bg-dark"> 
       <div class="body"><div class="us">
-       <div id ="top-header">      <h1 class="d-inline">Hurira </h1><span id="status">Tap fly icon</span> 
-     <span class="d-inline nav navbar-right navbar-nav " onclick="settingToggle()"><iconify-icon  icon="gala:settings"></iconify-icon></span></div></div>
-          <div class="innerBody bg-secondary">
+       <div id ="top-header">      <h1 class="d-inline">Hurira </h1><span id="status" >Tap fly icon</span> 
+     <span class="d-inline nav navbar-right navbar-nav " ><iconify-icon  icon="gala:settings"></iconify-icon></span></div></div>
+          <div class="innerBody">
      <div class="mt-4 settings" id="div_language">
       <h2 class="mb-3 text-light">Select Language</h2>
       <select class="form-select bg-secondary text-light" id="select_language" onchange="updateCountry()"></select>
       <select class="form-select bg-secondary text-light mt-2" id="select_dialect"></select>
     </div> 
      <div contenteditable id="chatContainer">
-        <span id="copyButton"><p>copy</p></span>
+         
     </div>
+    
+      <div id="btns"> 
+           <button class="btn btn-default" id="indent"><iconify-icon icon="codicon:indent"></iconify-icon></button>
+           <button class="btn btn-default" id="copyButton"><iconify-icon icon="prime:copy"></iconify-icon></button>
+       </div>
     </div>
-   <div class="ls bg-dark">
-    <div  class="mt-4 bottom-div container">
+    
+    <div class="ls bg-dark">
+   <div class="mt-4 jst-border"> <div class="mt-4 bottom-div ">
      
-      <span  id="interim" class="text-light"></span> <span id="start" ><iconify-icon icon="fluent:send-28-filled"></iconify-icon></span>
-      </div>
+      <span  id="interim" class="text-light"></span> <span id="start"><iconify-icon icon="fluent:send-28-filled"></iconify-icon></span>
+      <p id="cliperr" style="color:red;display:inline"class="small">
+      </div></div>
       <p class="text-muted small ">
-      Free Research Preview. HuriraTTS may generate incorrect spellings or grammar.
+      Free Research Preview. HuriraTTS may generate incorrect punctuation or mis-spellings.
       
       </p>
   
     
-    </div>
-    </div>
     <script src="listen.js"></script>
   <script src="languages.js"></script>
 <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
