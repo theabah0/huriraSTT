@@ -131,7 +131,7 @@ span {
  width:90vw;
  display:block;
  padding-bottom:30px;
-   
+   overflow:scroll;
   height: 80vw;
    position:relative;
    
